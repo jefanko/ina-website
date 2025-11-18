@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#FFA500] via-[#FF8C00] to-[#FF7F00] overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden"
     >
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 border-4 border-white transform rotate-45"></div>
@@ -41,7 +41,7 @@ const Hero = () => {
 
           <button
             onClick={scrollToContact}
-            className="group bg-white text-[#FFA500] px-8 py-4 rounded-none font-semibold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center space-x-2"
+            className="group bg-white text-brand-primary px-8 py-4 rounded-none font-semibold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center space-x-2"
           >
             <span>Hubungi Kami</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -49,7 +49,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/95 to-transparent"></div>
     </section>
   );
 };
