@@ -10,10 +10,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-4">
                 <img src="/Picture1.png" alt="Logo" className="h-12 w-auto" />
                 <div>
-                  <div className="text-[#FFA500] font-bold text-sm leading-tight">
+                  <div className="text-brand-primary font-bold text-sm leading-tight">
                     PT. INDODAYA
                   </div>
-                  <div className="text-[#FFA500] font-bold text-sm leading-tight">
+                  <div className="text-brand-primary font-bold text-sm leading-tight">
                     NARATAMA ABADI
                   </div>
                 </div>
@@ -26,18 +26,23 @@ const Footer = () => {
             <div>
               <h3 className="font-bold text-lg mb-4">Navigasi</h3>
               <ul className="space-y-2 text-sm">
-                {['Home', 'Tentang Kami', 'Layanan', 'Proyek', 'Klien', 'Kontak'].map(
-                  (item) => (
-                    <li key={item}>
-                      <a
-                        href={`#${item.toLowerCase().replace(' ', '-')}`}
-                        className="text-gray-400 hover:text-[#FFA500] transition-colors"
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
+                {[
+                  'Home',
+                  'Tentang Kami',
+                  'Layanan',
+                  'Proyek',
+                  'Klien',
+                  'Kontak',
+                ].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item.toLowerCase().replace(' ', '-')}`}
+                      className="text-gray-400 hover:text-brand-primary transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
