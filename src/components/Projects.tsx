@@ -42,14 +42,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-24 bg-white/95 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Pengalaman Proyek
             </h2>
-            <div className="w-24 h-1 bg-[#FFA500] mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-brand-primary mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Berbagai proyek yang telah kami kerjakan dengan standar kualitas
               tertinggi
@@ -64,13 +64,13 @@ const Projects = () => {
                 triggerOnce
               >
                 <div className="bg-gray-50 p-8 hover:shadow-lg transition-shadow duration-300 h-full">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-[#FFA500]">
+                  <h3 className="text-xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-brand-primary">
                     {category.title}
                   </h3>
                   <ul className="space-y-4">
                     {category.projects.map((project, pIndex) => (
                       <li key={pIndex} className="flex items-start space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-[#FFA500] flex-shrink-0 mt-1" />
+                        <CheckCircle2 className="w-5 h-5 text-brand-primary flex-shrink-0 mt-1" />
                         <span className="text-gray-700 text-sm leading-relaxed">
                           {project}
                         </span>
@@ -82,7 +82,7 @@ const Projects = () => {
             ))}
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-[#FFA500] to-[#FF8C00] p-8 md:p-12 text-white text-center">
+          <div className="mt-12 bg-gradient-to-r from-brand-primary to-brand-dark p-8 md:p-12 text-white text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Siap untuk Proyek Anda?
             </h3>
@@ -94,7 +94,7 @@ const Projects = () => {
                 const element = document.getElementById('contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-white text-[#FFA500] px-8 py-3 font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-brand-primary px-8 py-3 font-semibold hover:bg-gray-100 transition-colors"
             >
               Konsultasi Gratis
             </button>
