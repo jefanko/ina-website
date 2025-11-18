@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white relative">
       {/* LAPISAN LATAR BELAKANG */}
-      <div className="absolute inset-0 bg-transmission-lines bg-cover bg-fixed bg-center opacity-5 z-0"></div>
+      <div className="absolute inset-0 bg-transmission-lines bg-cover bg-fixed bg-center opacity-50 z-0"></div>
 
       {/* LAPISAN KONTEN */}
       <div className="relative z-10">
