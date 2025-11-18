@@ -29,14 +29,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-white/95 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Hubungi Kami
             </h2>
-            <div className="w-24 h-1 bg-[#FFA500] mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-brand-primary mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Kami siap membantu kebutuhan proyek Anda dengan solusi terbaik
             </p>
@@ -49,13 +49,16 @@ const Contact = () => {
                 className="bg-gray-50 p-6 text-center hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[#FFA500] bg-opacity-10 rounded-full flex items-center justify-center">
-                    <info.icon className="w-8 h-8 text-[#FFA500]" />
+                  <div className="w-16 h-16 bg-brand-primary bg-opacity-10 rounded-full flex items-center justify-center">
+                    <info.icon className="w-8 h-8 text-brand-primary" />
                   </div>
                 </div>
                 <h3 className="font-bold text-gray-900 mb-3">{info.title}</h3>
                 {info.content.map((line, lIndex) => (
-                  <p key={lIndex} className="text-sm text-gray-600 leading-relaxed">
+                  <p
+                    key={lIndex}
+                    className="text-sm text-gray-600 leading-relaxed"
+                  >
                     {line}
                   </p>
                 ))}
@@ -64,7 +67,7 @@ const Contact = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-[#FFA500] to-[#FF8C00] p-8 md:p-12 text-white">
+            <div className="bg-gradient-to-br from-brand-primary to-brand-dark p-8 md:p-12 text-white">
               <h3 className="text-2xl font-bold mb-6">
                 Informasi Perusahaan
               </h3>
@@ -107,7 +110,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-[#FFA500] transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-brand-primary transition-colors"
                     placeholder="Nama Anda"
                   />
                 </div>
@@ -117,7 +120,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-[#FFA500] transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-brand-primary transition-colors"
                     placeholder="email@example.com"
                   />
                 </div>
@@ -127,13 +130,13 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-[#FFA500] transition-colors"
+                    className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:border-brand-primary transition-colors"
                     placeholder="Tuliskan pesan Anda di sini..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[#FFA500] text-white px-6 py-3 font-semibold hover:bg-[#FF8C00] transition-colors"
+                  className="w-full bg-brand-primary text-white px-6 py-3 font-semibold hover:bg-brand-dark transition-colors"
                 >
                   Kirim Pesan
                 </button>
