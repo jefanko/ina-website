@@ -1,4 +1,5 @@
 import { CheckCircle2 } from 'lucide-react';
+import { Slide } from 'react-awesome-reveal';
 
 const Projects = () => {
   const projectCategories = [
@@ -57,24 +58,27 @@ const Projects = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {projectCategories.map((category, index) => (
-              <div
+              <Slide
                 key={index}
-                className="bg-gray-50 p-8 hover:shadow-lg transition-shadow duration-300"
+                direction={index % 2 === 0 ? 'left' : 'right'} // Animasi dari kiri untuk index genap, kanan untuk ganjil
+                triggerOnce
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-[#FFA500]">
-                  {category.title}
-                </h3>
-                <ul className="space-y-4">
-                  {category.projects.map((project, pIndex) => (
-                    <li key={pIndex} className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#FFA500] flex-shrink-0 mt-1" />
-                      <span className="text-gray-700 text-sm leading-relaxed">
-                        {project}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <div className="bg-gray-50 p-8 hover:shadow-lg transition-shadow duration-300 h-full">
+                  <h3 className="text-xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-[#FFA500]">
+                    {category.title}
+                  </h3>
+                  <ul className="space-y-4">
+                    {category.projects.map((project, pIndex) => (
+                      <li key={pIndex} className="flex items-start space-x-3">
+                        <CheckCircle2 className="w-5 h-5 text-[#FFA500] flex-shrink-0 mt-1" />
+                        <span className="text-gray-700 text-sm leading-relaxed">
+                          {project}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Slide>
             ))}
           </div>
 
