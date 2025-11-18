@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'transmission-lines': "url('/transmission-bg.png')",
+        'transmission-lines': "url('/public/transmission-bg.png')",
       },
     },
   },
