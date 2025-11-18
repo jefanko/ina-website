@@ -1,4 +1,5 @@
 import { Wrench, ShoppingCart, HardHat, Zap } from 'lucide-react';
+import { Fade } from 'react-awesome-reveal';
 
 const Services = () => {
   const services = [
@@ -44,22 +45,24 @@ const Services = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-[#FFA500]"
-              >
-                <div className="mb-6">
-                  <service.icon className="w-16 h-16 text-[#FFA500] group-hover:scale-110 transition-transform duration-300" />
+            <Fade direction="up" cascade damping={0.1} triggerOnce>
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-8 hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-[#FFA500] hover:scale-105" // Menambahkan hover:scale-105 untuk "expansion"
+                >
+                  <div className="mb-6">
+                    <service.icon className="w-16 h-16 text-[#FFA500] group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </Fade>
           </div>
 
           <div className="mt-16 bg-white p-8 md:p-12 border-l-4 border-[#FFA500]">
