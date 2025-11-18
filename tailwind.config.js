@@ -8,7 +8,7 @@ export default {
         'brand-dark': '#D97706', // Oranye yang lebih gelap & tenang untuk gradasi/hover
       },
       backgroundImage: {
-        'transmission-lines': "url('/transmission-bg.png')",
+        'transmission-lines': "url('public/transmission-bg.png')",
       },
     },
   },
