@@ -47,14 +47,14 @@ const Clients = () => {
   ];
 
   return (
-    <section id="clients" className="py-24 bg-gray-50">
+    <section id="clients" className="py-24 bg-gray-50/95 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Klien Kami
             </h2>
-            <div className="w-24 h-1 bg-[#FFA500] mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-brand-primary mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Dipercaya oleh berbagai instansi dan perusahaan terkemuka di
               Indonesia
@@ -69,8 +69,8 @@ const Clients = () => {
                   className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 group"
                 >
                   <div className="mb-6 flex justify-center">
-                    <div className="w-20 h-20 bg-[#FFA500] bg-opacity-10 rounded-full flex items-center justify-center group-hover:bg-opacity-20 transition-colors">
-                      <client.icon className="w-10 h-10 text-[#FFA500]" />
+                    <div className="w-20 h-20 bg-brand-primary bg-opacity-10 rounded-full flex items-center justify-center group-hover:bg-opacity-20 transition-colors">
+                      <client.icon className="w-10 h-10 text-brand-primary" />
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -100,9 +100,9 @@ const Clients = () => {
               {achievements.map((achievement, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
-                    <achievement.icon className="w-12 h-12 text-[#FFA500]" />
+                    <achievement.icon className="w-12 h-12 text-brand-primary" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-[#FFA500] mb-2">
+                  <div className="text-3xl md:text-4xl font-bold text-brand-primary mb-2">
                     {achievement.value}
                   </div>
                   <div className="text-gray-700 text-sm md:text-base">
@@ -120,7 +120,7 @@ const Clients = () => {
               </h3>
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div>
-                  <div className="text-[#FFA500] text-4xl font-bold mb-2">
+                  <div className="text-brand-primary text-4xl font-bold mb-2">
                     ✓
                   </div>
                   <h4 className="font-semibold mb-2">Profesional</h4>
@@ -129,14 +129,14 @@ const Clients = () => {
                   </p>
                 </div>
                 <div>
-                  <div className="text-[#FFA500] text-4xl font-bold mb-2">
+                  <div className="text-brand-primary text-4xl font-bold mb-2">
                     ✓
                   </div>
                   <h4 className="font-semibold mb-2">Berkualitas</h4>
                   <p className="text-sm text-gray-300">Standar kerja tinggi</p>
                 </div>
                 <div>
-                  <div className="text-[#FFA500] text-4xl font-bold mb-2">
+                  <div className="text-brand-primary text-4xl font-bold mb-2">
                     ✓
                   </div>
                   <h4 className="font-semibold mb-2">Tepat Waktu</h4>
