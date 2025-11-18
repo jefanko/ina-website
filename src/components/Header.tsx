@@ -41,10 +41,10 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <img src="/Picture1.png" alt="Logo" className="h-12 w-auto" />
             <div className="hidden md:block">
-              <div className="text-[#FFA500] font-bold text-lg leading-tight">
+              <div className="text-brand-primary font-bold text-lg leading-tight">
                 PT. INDODAYA
               </div>
-              <div className="text-[#FFA500] font-bold text-lg leading-tight">
+              <div className="text-brand-primary font-bold text-lg leading-tight">
                 NARATAMA ABADI
               </div>
             </div>
@@ -55,7 +55,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-medium transition-colors hover:text-[#FFA500] ${
+                className={`font-medium transition-colors hover:text-brand-primary ${
                   isScrolled ? 'text-gray-700' : 'text-white'
                 }`}
               >
@@ -84,7 +84,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left font-medium text-gray-700 hover:text-[#FFA500] transition-colors"
+                className="block w-full text-left font-medium text-gray-700 hover:text-brand-primary transition-colors"
               >
                 {item.label}
               </button>
