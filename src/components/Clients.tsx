@@ -1,4 +1,5 @@
 import { Building2, Award, Users, TrendingUp } from 'lucide-react';
+import { Zoom } from 'react-awesome-reveal';
 
 const Clients = () => {
   const clientTypes = [
@@ -61,32 +62,34 @@ const Clients = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {clientTypes.map((client, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 group"
-              >
-                <div className="mb-6 flex justify-center">
-                  <div className="w-20 h-20 bg-[#FFA500] bg-opacity-10 rounded-full flex items-center justify-center group-hover:bg-opacity-20 transition-colors">
-                    <client.icon className="w-10 h-10 text-[#FFA500]" />
+            <Zoom cascade damping={0.2} triggerOnce>
+              {clientTypes.map((client, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 group"
+                >
+                  <div className="mb-6 flex justify-center">
+                    <div className="w-20 h-20 bg-[#FFA500] bg-opacity-10 rounded-full flex items-center justify-center group-hover:bg-opacity-20 transition-colors">
+                      <client.icon className="w-10 h-10 text-[#FFA500]" />
+                    </div>
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {client.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{client.description}</p>
+                  <ul className="space-y-2">
+                    {client.examples.map((example, eIndex) => (
+                      <li
+                        key={eIndex}
+                        className="text-sm text-gray-700 bg-gray-50 py-2 px-3"
+                      >
+                        {example}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {client.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{client.description}</p>
-                <ul className="space-y-2">
-                  {client.examples.map((example, eIndex) => (
-                    <li
-                      key={eIndex}
-                      className="text-sm text-gray-700 bg-gray-50 py-2 px-3"
-                    >
-                      {example}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </Zoom>
           </div>
 
           <div className="bg-white p-8 md:p-12">
