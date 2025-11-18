@@ -2,7 +2,7 @@ import { Target, Eye, Building2 } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="bg-white/95 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
