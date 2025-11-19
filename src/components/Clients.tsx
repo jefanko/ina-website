@@ -1,5 +1,9 @@
 import { Building2, Award, Users, TrendingUp } from 'lucide-react';
 import { Zoom } from 'react-awesome-reveal';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Clients = () => {
   const clientTypes = [
@@ -21,6 +25,17 @@ const Clients = () => {
       description: 'Sektor Swasta',
       examples: ['Perusahaan Konstruksi', 'Industri Manufaktur', 'Developer'],
     },
+  ];
+
+  const clientLogos = [
+    { name: 'Waskita', url: 'https://investor.waskita.co.id/', logo: '🏢' },
+    { name: 'Adhi', url: 'https://adhi.co.id/en/', logo: '🏗️' },
+    { name: 'PDAM', url: 'https://pdamkotamagelang.com/', logo: '💧' },
+    { name: 'Panasonic', url: 'https://www.panasonic.com/id/corporate.html', logo: '⚙️' },
+    { name: 'Indorope', url: 'http://indorope.com/projects/vico-indonesia/', logo: '🔗' },
+    { name: 'PLN', url: 'https://web.pln.co.id/', logo: '⚡' },
+    { name: 'Client 7', url: '#', logo: '🏢' },
+    { name: 'Wika', url: 'https://www.wika.co.id/', logo: '🏭' },
   ];
 
   const achievements = [
@@ -59,6 +74,34 @@ const Clients = () => {
               Dipercaya oleh berbagai instansi dan perusahaan terkemuka di
               Indonesia
             </p>
+          </div>
+
+          <div className="mb-16">
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              spaceBetween={20}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 4 },
+              }}
+              className="pb-12"
+            >
+              {clientLogos.map((client, index) => (
+                <SwiperSlide key={index}>
+                  <a
+                    href={client.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white p-8 h-40 flex items-center justify-center hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                  >
+                    <div className="text-5xl">{client.logo}</div>
+                  </a>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
